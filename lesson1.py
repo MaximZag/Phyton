@@ -22,7 +22,6 @@ import statistics
   23, 544, 34              #вивело в консолі
 """
 
-
 """
 1)є строка:
 greeting = 'Hello, world'
@@ -87,8 +86,38 @@ greeting = 'Hello, world'
 #     return s
 # func([2,5,4,8,5,9,7])
 
-def func(l):
-    s=statistics.mean(l)
-    print(s)
-    return s
-func([2,2,4,4,2,4])
+# def func(l):
+#     s=statistics.mean(l)
+#     print(s)
+#     return s
+# func([2,2,4,4,2,4])
+
+"""
+1)Дан list:
+  list = [22, 3,5,2,8,2,-23, 8,23,5]
+  - знайти мін число
+  - видалити усі дублікати
+  - замінити кожне 4-те значення на 'X'
+2) вивести на екран пустий квадрат з "*" сторона якого вказана як агрумент функції
+3) вывести табличку множення за допомогою цикла while
+4) переробити це завдання під меню
+"""
+
+# list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
+# min = min(list)
+# print(min)
+
+
+
+# res = []
+# res.append(list[0])
+# for i in list:
+#     s = len(res)
+#     n = 0
+#     for k in res:
+#         n = n + 1
+#         if i == k:
+#             break
+#         if n == s:
+#             res.append(i)
+# print(res)
