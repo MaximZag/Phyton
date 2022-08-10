@@ -12,7 +12,7 @@ st = 'as 23 fdfdg544' введена строка
 #     if i.isdigit():
 #         res.append(i)
 # print(','.join(res))
-import statistics
+# import statistics
 
 """
 2)написати прогу яка вибирає зі введеної строки числа і виводить їх 
@@ -21,6 +21,8 @@ import statistics
   st = 'as 23 fdfdg544 34' #введена строка
   23, 544, 34              #вивело в консолі
 """
+
+# print(', '.join(''.join(i if i.isdigit() else ' ' for i in st).split()))
 
 """
 1)є строка:
@@ -103,21 +105,71 @@ greeting = 'Hello, world'
 4) переробити це завдання під меню
 """
 
-# list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
-# min = min(list)
-# print(min)
+list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5, 2, 6, 7]
+def minimum():
+    resmin = min(list)
+    print(resmin)
 
 
+def removedublicate():
+    res = []
+    res.append(list[0])
+    for i in list:
+        s = len(res)
+        n = 0
+        for k in res:
+            n = n + 1
+            if i == k:
+                break
+            if n == s:
+                res.append(i)
+    print(res)
 
-# res = []
-# res.append(list[0])
-# for i in list:
-#     s = len(res)
-#     n = 0
-#     for k in res:
-#         n = n + 1
-#         if i == k:
-#             break
-#         if n == s:
-#             res.append(i)
-# print(res)
+
+def replacetox():
+    for i in range(3, len(list), 4):
+        list[i]='x'
+    print(list)
+
+
+def square(number):
+    a='*'
+    print(a*number)
+    for i in range(0,number-2):
+        print(a+' '*(number-2)+a)
+    print(a*number)
+
+
+def table():
+    i = 1
+    while i <= 9:
+        k = 1
+        while k <= 9:
+            result = k * i
+            print(f'{result:4}', end='')
+            k += 1
+        i += 1
+        print()
+
+while True:
+    print('1) minimum')
+    print('2) remove_duplicate')
+    print('3) replace_to_x')
+    print('4) square')
+    print('5) table')
+    print('9) exit')
+
+    select = input('Make your selection: ')
+
+    if select == '1':
+        minimum()
+    elif select == '2':
+        removedublicate()
+    elif select == '3':
+        replacetox()
+    elif select == '4':
+        square(10)
+    elif select == '5':
+        table()
+    elif select == '9':
+        break
